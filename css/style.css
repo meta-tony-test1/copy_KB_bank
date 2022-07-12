@@ -81,14 +81,16 @@ header .gnb li:last-child:after {display: none;}
 #stiker .sign a:first-child { border:1px solid #aaa; width: 80px; height: 40px; display: inline-block; margin-top: 20px; line-height: 40px; text-align: center;}
 #stiker .sign img { margin-top: 20px; }
 /* 추가 메뉴*/
-#stiker .dnb { border-top: 1px solid #ddd; font-size:14px; }
+#stiker .dnb { border-top: 1px solid #ddd; font-size:14px; background: #f9f9f9;}
 #stiker .dnb .wrap { display: none;}
-#stiker .dnb .part1 { display: block; }
-#stiker .dnb .dnb_point {display: block; width: 100%; height: 77px; line-height: 77px; border-bottom: 1px solid #ddd; padding: 0;}
-#stiker .dnb .dnb_link { background: #faa;}
-#stiker .dnb .dnb_point li { float: left; border:1px solid #ddd; border-radius: 40px; line-height: 24px; margin-right: 10px; padding:0 15px;  margin-top: 22px;}
 #stiker .dnb:after, #stiker .dnb .dnb_link:after {content:""; clear: both; display: block;}
+#stiker .dnb .dnb_point {display: block; width: 100%; height: 77px; line-height: 77px; border-bottom: 1px solid #ddd; padding: 0; float:none;}
+#stiker .dnb .dnb_point li { float: left; border:1px solid #ddd; border-radius: 40px; line-height: 24px; margin-right: 10px; padding:0 15px;  margin-top: 22px; color:#333;}
+#stiker .dnb .dnb_point li:hover { background: #ffcc00;}
+#stiker .dnb .dnb_link { display:flex; justify-content: space-between; font-size:12px;}
+#stiker .dnb .dnb_link ul li { margin-left: 10px; line-height: 40px;}
+#stiker .dnb .dnb_link ul li:hover { color: #000; text-decoration: underline; }
+#stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;}
 #stiker .dnb ul { float: left; padding:34px 0; }
-#stiker .dnb ul li { line-height: 30px;}
 
 

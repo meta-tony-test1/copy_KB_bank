@@ -100,6 +100,9 @@
             <li>나의 포인트리</li>
             <li>포인트리 사용·전환</li>
         </ul>
+        <div class="dnb_link">
+
+        </div>
         </div>
         
         <div class="wrap part3">
@@ -109,6 +112,9 @@
             <li>이용대금명세서</li>
             <li>겟백서비스 안내·신청</li>
         </ul>
+        <div class="dnb_link">
+
+        </div>
         </div>
         
         <div class="wrap part4">
@@ -118,6 +124,9 @@
             <li>이용대금명세서</li>
             <li>겟백서비스 안내·신청</li>
         </ul>
+        <div class="dnb_link">
+
+        </div>
         </div>
         
         <div class="wrap part5">
@@ -127,6 +136,9 @@
             <li>이용대금명세서</li>
             <li>겟백서비스 안내·신청</li>
         </ul>
+        <div class="dnb_link">
+
+        </div>
         </div>
         
         <div class="wrap part6">
@@ -136,19 +148,26 @@
             <li>이용대금명세서</li>
             <li>겟백서비스 안내·신청</li>
         </ul>
+        <div class="dnb_link">
+
+        </div>
         </div>
         
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script>
+        var n;
         $("#stiker .menu li").hover(function(){
-        var n = $(this).index();
+        n = $(this).index();
         var move = n * 75;
 //        console.log(n);
-        $("#stiker .wrap > i").css({"display":"block"}).stop().animate({"left":move},100)
+        $("#stiker .wrap > i").css({"display":"block"}).stop().animate({"left":move},200);
+        $(".part" +(n + 1)).stop().slideDown(500);
+        $()
         },function(){
-        $("#stiker .wrap > i").css({"display":"none"})
+        $("#stiker .wrap > i").css({"display":"none"});
+        $(".part" +(n + 1)).stop().slideUp(500);
         })
         
 
