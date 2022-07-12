@@ -1,0 +1,6 @@
+@media (max-width:480px) { /* 모바일용 */
+}
+@media (min-width:481px) and (max-width:800px) { /* 태블릿용 */
+}
+@media (min-width:801px) { /* PC용 */
+}

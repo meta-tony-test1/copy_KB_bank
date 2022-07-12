@@ -1,0 +1,94 @@
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* web font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* common */
+body { font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:12px;}
+a { color:inherit; text-decoration: none;}
+img {vertical-align: top;}
+.wrap { width: 1080px; margin:0 auto; position: relative;}
+
+ul:after, .wrap:after { content:""; clear: both; display: block;}
+
+/* header */
+header { line-height: 60px; border-bottom: 1px solid #ddd}
+header li { float: left;}
+header h1 img { margin-top: 15px;}
+header .snb { position: absolute; top: 0; left: 200px; color:#333;}
+header .snb li { margin-right: 15px;}
+header .snb li a:hover { border-bottom: 2px solid #000; font-weight: 600; padding-bottom: 2px}
+
+header .gnb { position: absolute; top: 0; right: 0; color:#666; font-size: 12px; font-weight: 100;}
+header .gnb li:after {content: "|"; margin: 0 10px; color:#ccc;}
+header .gnb li:last-child:after {display: none;}
+/* stiker header */
+#stiker { border-bottom:1px solid #ddd; line-height: 80px; position: sticky;}
+#stiker .menu { float: left; font-size:15px; font-weight: 500; color: #000; text-align: center;}
+#stiker .menu li { width: 45px;}
+#stiker .wrap > i {content: ""; background:#ffe066; width: 44px; height: 14px; position: absolute; top: 33px; left: 0; display: none;}
+#stiker .menu li { float: left; margin-right: 30px; position: relative;}
+#stiker .sign { float: right; }
+#stiker .sign a { margin-left: 10px; }
+#stiker .sign a:first-child { border:1px solid #aaa; width: 80px; height: 40px; display: inline-block; margin-top: 20px; line-height: 40px; text-align: center;}
+#stiker .sign img { margin-top: 20px; }
+/* 추가 메뉴*/
+#stiker .dnb { border-top: 1px solid #ddd; font-size:14px; }
+#stiker .dnb .wrap { display: none;}
+#stiker .dnb .part1 { display: block; }
+#stiker .dnb .dnb_point {display: block; width: 100%; height: 77px; line-height: 77px; border-bottom: 1px solid #ddd; padding: 0;}
+#stiker .dnb .dnb_link { background: #faa;}
+#stiker .dnb .dnb_point li { float: left; border:1px solid #ddd; border-radius: 40px; line-height: 24px; margin-right: 10px; padding:0 15px;  margin-top: 22px;}
+#stiker .dnb:after, #stiker .dnb .dnb_link:after {content:""; clear: both; display: block;}
+#stiker .dnb ul { float: left; padding:34px 0; }
+#stiker .dnb ul li { line-height: 30px;}
+
+
