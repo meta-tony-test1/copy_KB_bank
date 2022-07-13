@@ -75,46 +75,49 @@ header .top .gnb li:last-child:after {display: none;}
 /* stiker */
 header #stiker { border-bottom:1px solid #ddd; line-height: 80px; top: 60px; left: 0; background: #fff; z-index: 1000; width: 100%;}
 header #stiker .menu { float: left; font-size:15px; font-weight: 500; color: #000; text-align: center;}
-header #stiker .wrap > i { background:#ffe066; width: 0; height: 14px; position: absolute; top: 33px;  transition:0.2s; }
+header #stiker .wrap > i { background:#ffe066; width: 0; height: 12px; position: absolute; top: 34px;  transition:0.2s; }
 header #stiker .menu li { float: left; padding-right: 30px; position: relative;}
 header #stiker .sign { float: right; }
 header #stiker .sign a { margin-left: 10px; }
 header #stiker .sign a:first-child { border:1px solid #aaa; width: 80px; height: 40px; display: inline-block; margin-top: 20px; line-height: 40px; text-align: center;}
 header #stiker .sign img { margin-top: 20px; }
-header /* 추가 메뉴*/
+/* 추가 메뉴*/
 header #stiker .dnb {border-top: 1px solid #ddd; font-size:14px; background: #f9f9f9; width: 100%; }
+
 header #stiker .dnb .wrap { display: none;}
 header #stiker .dnb:after, #stiker .dnb .dnb_link:after {content:""; clear: both; display: block;}
 header #stiker .dnb .dnb_point {display: block; width: 100%; height: 77px; line-height: 77px; border-bottom: 1px solid #ddd; padding: 0; float:none;}
 header #stiker .dnb .dnb_point li { float: left; border:1px solid #ddd; border-radius: 40px; line-height: 24px; margin-right: 10px; padding:0 15px;  margin-top: 22px; color:#333;}
 header #stiker .dnb .dnb_point li:hover { background: #ffcc00;}
+
 header #stiker .dnb .dnb_link { display:flex; justify-content: space-between; font-size:12px;}
-header #stiker .dnb .dnb_link ul { border-left: 1px solide #ddd; }
+header #stiker .dnb .dnb_link ul { border-left: 1px solid #ddd; float: left; margin:34px 0;  }
+header #stiker .dnb .dnb_link ul:first-child { border-left:none;}
 header #stiker .dnb .dnb_link ul li { margin-left: 10px; line-height: 40px;}
 header #stiker .dnb .dnb_link ul li:hover { color: #000; text-decoration: underline; }
 header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;}
-header #stiker .dnb ul { float: left; padding:34px 0; }
 
 /* modal window */
-.modal {position: absolute; bottom: 0;left: 0; background: rgba(0,0,0,0.5); height: 100%; width: 100%; z-index: 100;}
+.modal {position: absolute; bottom: 0;left: 0; background: rgba(0,0,0,0.5); height: 100%; width: 100%; z-index: 100; transition:1s;}
 .curtain { transition:1s;}
 /* blank */
 .blank {height: 144px;}
 
 /* 메인비주얼 슬라이드 */
-#visual { }
-#visual .visual_slide {position: relative; width: 672px; height: 260px; /*overflow: hidden*/}
-#visual .visual_slide ul { width: 4200px;}
+#visual { margin: 40px 0 80px; }
+#visual .visual_slide {position: relative; width: 672px; height: 260px; border-radius: 10px; overflow: hidden;}
+#visual .visual_slide ul { width: 4200px; position: relative;}
 #visual .visual_slide ul li { width: 700px; height: 260px; float: left;}
 #visual .visual_slide ul li:nth-child(1) { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
 #visual .visual_slide ul li:nth-child(2) { background:url(../images/main/pc-expresstrain-bg.png)no-repeat left top  ;}
 #visual .visual_slide ul li:nth-child(3) { background:url(../images/main/pc-travel-bg.png)no-repeat left top  ;}
 #visual .visual_slide ul li:nth-child(4) { background:url(../images/main/pc-starshop-bg.png)no-repeat left top  ;}
 #visual .visual_slide ul li:nth-child(5) { background:url(../images/main/pc-legolandCard-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul li:nth-child(6) { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
 #visual .visual_slide .prev { position: absolute; top:120px; left:30px}
 #visual .visual_slide .next { position: absolute; top:120px; right:30px}
 #visual .visual_slide .stop { position: absolute; bottom:20px; left: 356px; }
-#visual .visual_slide > span { position: absolute;bottom:16px; left: 300px; background: rgba(0,0,0,0.3); width: 44px; line-height: 24px; border-radius: 24px; text-align: center; }
+#visual .visual_slide > span { position: absolute;bottom:16px; left: 300px; background: rgba(0,0,0,0.3); width: 44px; line-height: 24px; border-radius: 24px; text-align: center; font-size: 14px; }
 
 
 

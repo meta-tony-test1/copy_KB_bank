@@ -366,6 +366,49 @@
         }
         })
 
+        /* 슬라이드 배너 */
+        var sn = 0;
+        function auto() {
+            sn++;
+            if( sn >= 5){
+                $(".visual_slide ul").stop().animate({"left":-700 * sn},300,function(){
+                sn = 0;
+                $(this).css({"left":0})
+                $("span b").text(1)
+                })
+            }else{
+                $(".visual_slide ul").stop().animate({"left":-700 * sn},300)
+                $("span b").text(sn + 1)
+            }
+        }
+        var timer = setInterval("auto()",3000)
+
+        $(".prev").click(function(){
+            clearInterval(timer)
+            if(sn <= 0){
+            sn = 5;
+            $(".visual_slide ul").css({"left":-700 * sn}).stop().animate({"left":-700 * (sn - 1)},300)
+                $("span b").text(5)
+            }else{
+                $(".visual_slide ul").stop().animate({"left":-700 * (sn - 1)},300)
+                $("span b").text(sn)
+            }
+            sn--;
+            timer = setInterval("auto()",3000);
+        })
+        $(".next").click(function(){
+            clearInterval(timer)
+            auto();
+            timer = setInterval("auto()",3000)
+        })
+        $(".stop").click(function(){
+            clearInterval(timer);
+            $(this).children("img").attr("src","images/main/btn-play.png")
+        })
+
+
+
+
     </script>
 </body>
 </html>
