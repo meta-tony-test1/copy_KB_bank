@@ -1,6 +1,13 @@
-@media (max-width:480px) { /* 모바일용 */
-}
-@media (min-width:481px) and (max-width:800px) { /* 태블릿용 */
+@media (max-width:800px) { /* 모바일용 */
+    .pc{ display:none;}
+    .wrap { width: 98%;}
+    header { height: 56px; position: fixed; top: 0;left: 0; width: 100%; background: #fff; border: none;}
+    header h1 { text-align: center; }
+    header h1 img { height: 24px; margin-top: 16px;}
+    header .m_menu { position: absolute; top: 0; right: 0; margin-right: 14px;}
+    header .m_menu img { margin-top: 16px; }
 }
 @media (min-width:801px) { /* PC용 */
+    .mob{ display:none;}
+
 }
