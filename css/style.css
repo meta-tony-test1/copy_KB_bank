@@ -104,20 +104,49 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 .blank {height: 144px;}
 
 /* 메인비주얼 슬라이드 */
-#visual { margin: 40px 0 80px; }
+#visual { margin: 40px 0 80px; color: #21201d; }
 #visual .visual_slide {position: relative; width: 672px; height: 260px; border-radius: 10px; overflow: hidden;}
 #visual .visual_slide ul { width: 4200px; position: relative;}
-#visual .visual_slide ul li { width: 700px; height: 260px; float: left;}
+#visual .visual_slide ul li { width: 700px; height: 260px; float: left; padding: 34px 82px 0; position: relative;}
+#visual .visual_slide ul li img { position: absolute; top: 0; right: 0; opacity: 1;}
+
 #visual .visual_slide ul li:nth-child(1) { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
+#visual .visual_slide ul li:nth-child(1) img:nth-of-type(1) { top: 118px;left: 376px;}
+#visual .visual_slide ul li:nth-child(1) img:nth-of-type(2) { top: 32px; left: 376px;}
+#visual .visual_slide ul li:nth-child(1) img:nth-of-type(3) { top: 22px; left: 496px;}
+
 #visual .visual_slide ul li:nth-child(2) { background:url(../images/main/pc-expresstrain-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul li:nth-child(2) img:nth-of-type(1) { top: 48px; left: 376px; }
+#visual .visual_slide ul li:nth-child(2) img:nth-of-type(2) { top: 80px; left: 386px; }
+#visual .visual_slide ul li:nth-child(2) img:nth-of-type(3) { top: 167px;left:500px; }
+
 #visual .visual_slide ul li:nth-child(3) { background:url(../images/main/pc-travel-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul li:nth-child(3) img:nth-of-type(1) { top: 38px; left: 358px; z-index: 1;}
+#visual .visual_slide ul li:nth-child(3) img:nth-of-type(2) { top: 180px;left: 450px; }
+#visual .visual_slide ul li:nth-child(3) img:nth-of-type(3) { top: 44px; left: 420px; }
+
 #visual .visual_slide ul li:nth-child(4) { background:url(../images/main/pc-starshop-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul li:nth-child(4) img:nth-of-type(1) { top: 150px; left: 534px; z-index: 2; }
+#visual .visual_slide ul li:nth-child(4) img:nth-of-type(2) { top: 42px;  left: 350px; z-index: 1; }
+#visual .visual_slide ul li:nth-child(4) img:nth-of-type(3) { top: 50px;  left: 330px; }
+
 #visual .visual_slide ul li:nth-child(5) { background:url(../images/main/pc-legolandCard-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul li:nth-child(5) img:nth-of-type(1) { top: 190px; left: 360px; width: 120px; z-index: 1;}
+#visual .visual_slide ul li:nth-child(5) img:nth-of-type(2) { top: 172px; left: 526px; width: 68px; z-index: 1;}
+#visual .visual_slide ul li:nth-child(5) img:nth-of-type(3) { top: 36px;  left: 382px; }
+
 #visual .visual_slide ul li:nth-child(6) { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
-#visual .visual_slide .prev { position: absolute; top:120px; left:30px}
-#visual .visual_slide .next { position: absolute; top:120px; right:30px}
-#visual .visual_slide .stop { position: absolute; bottom:20px; left: 356px; }
-#visual .visual_slide > span { position: absolute;bottom:16px; left: 300px; background: rgba(0,0,0,0.3); width: 44px; line-height: 24px; border-radius: 24px; text-align: center; font-size: 14px; }
+
+#visual .visual_slide ul li span { font-size: 16px; }
+#visual .visual_slide ul li p { font-size: 26px; padding-top: 24px; font-weight: 500;}
+
+
+/* 비주얼 슬라이드 버튼 */
+#visual .visual_slide > .prev { position: absolute; top:120px; left:30px;}
+#visual .visual_slide > .next { position: absolute; top:120px; right:30px}
+#visual .visual_slide > .stop { position: absolute; bottom:20px; left: 356px; }
+#visual .visual_slide > .play { position: absolute; bottom:20px; left: 356px; display: none;}
+#visual .visual_slide > span { position: absolute; bottom:16px; left: 300px; background: rgba(0,0,0,0.3); width: 44px; line-height: 24px; border-radius: 24px; text-align: center; font-size: 14px; }
 
 
 

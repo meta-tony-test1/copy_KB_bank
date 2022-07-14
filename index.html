@@ -266,44 +266,60 @@
     <section id="visual">
         <div class="wrap">
         <div class="visual_slide">
-        <ul>
-            <li>
-                <span>펜타포트 락페스티벌 가자</span>
-                <p>KB Pay가 락 레스티벌<br>
-                티켓 1,000장 쏩니다!</p>
-            </li>
+            <ul class="vi_cont">
+                <li>
+                    <span>펜타포트 락페스티벌 가자</span>
+                    <p>KB Pay가 락 레스티벌<br>
+                    티켓 1,000장 쏩니다!</p>
+                    <img src="images/main/pc-pentaport-object01.png" alt="기타치는 캐릭터">
+                    <img src="images/main/pc-pentaport-object02.png" alt="앰프 일러스트">
+                    <img src="images/main/pc-pentaport-object03.png" alt="펜타포트 락 페스티벌">
+                </li>
 
-            <li>
-                <span>#니가 가라 화와이~</span>
-                <p>다시 가는 인천공황, <br>
-                직통열차 15% 할인!</p>
-            </li>
+                <li>
+                    <span>#니가 가라 화와이~</span>
+                    <p>다시 가는 인천공황, <br>
+                    직통열차 15% 할인!</p>
+                    <img src="images/main/pc-expresstrain-object01.png" alt="공항 일러스트">
+                    <img src="images/main/pc-expresstrain-object02.png" alt="비행기 티켓 일러스트">
+                    <img src="images/main/pc-expresstrain-object03.png" alt="여권 일러스트">
+                </li>
 
-            <li>
-                <span>해외 여행 Ready,Set Go!!!</span>
-                <p>드디어 캐리어를 끄는<br>
-                순간 2탄!
-                이/싱/괌/독/스</p>
-            </li>
+                <li>
+                    <span>해외 여행 Ready,Set Go!!!</span>
+                    <p>드디어 캐리어를 끄는<br>
+                    순간 2탄! <br>
+                    이/싱/괌/독/스</p>
+                    <img src="images/main/pc-travel-object01.png" alt="캐리어 일러스트">
+                    <img src="images/main/pc-travel-object02.png" alt="여권 일러스트">
+                    <img src="images/main/pc-travel-object03.png" alt="세계지도 일러스트">
+                </li>
 
-            <li>
-                <span>KB Pay와 스타샵의 만남!</span>
-                <p>KB Pay로 결제 시<br>
-                최대 2만 포인트리!</p>
-            </li>
+                <li>
+                    <span>KB Pay와 스타샵의 만남!</span>
+                    <p>KB Pay로 결제 시<br>
+                    최대 2만 포인트리!</p>
+                    <img src="images/main/pc-starshop-object01.png" alt="KB 페이">
+                    <img src="images/main/pc-starshop-object02.png" alt="스타샵">
+                    <img src="images/main/pc-starshop-object03.png" alt="금화 일러스트">
+                </li>
 
-            <li>
-                <span>레고랜드 1일 이용권</span>
-                <p>레고랜드 카드라면<br>
-                동반 자녀 무료!</p>
-            </li>
+                <li>
+                    <span>레고랜드 1일 이용권</span>
+                    <p>레고랜드 카드라면<br>
+                    동반 자녀 무료!</p>
+                    <img src="images/main/pc-legolandCard-object01.png" alt="레고랜드 입장권 일러스트">
+                    <img src="images/main/pc-legolandCard-object02.png" alt="선물박스 일러스트">
+                    <img src="images/main/pc-legolandCard-object03.png" alt="래고랜드 일러스트">
+                </li>
 
-            <li></li><!-- 제자리용-->
-        </ul>
-        <a href="#" class="prev"><img src="images/main/arr-1-left.png" alt="이전"></a>
-        <a href="#" class="next"><img src="images/main/arr-1-right.png" alt="다음"></a>
-        <a href="#" class="stop"><img src="images/main/btn-stop.png" alt="사진 고정"></a>
-        <span><b>1</b>/<i>5</i></span>
+                <li></li><!-- 제자리용-->
+            </ul>
+            <a href="#" class="prev"><img src="images/main/arr-1-left.png" alt="이전"></a>
+            <a href="#" class="next"><img src="images/main/arr-1-right.png" alt="다음"></a>
+            <a href="#" class="stop"><img src="images/main/btn-stop.png" alt="사진 고정"></a>
+            <a href="#" class="play"><img src="images/main/btn-play.png" alt="사진 고정"></a>
+            <span><b>1</b>/<i>5</i></span>
         </div>
         <div class="pc log"></div>
         </div>
@@ -365,20 +381,46 @@
             $("header").css({"position":"absolute","top":0})
         }
         })
-
         /* 슬라이드 배너 */
+        cont();
         var sn = 0;
+        function cont() { //콘텐츠 opacity와 position
+                $(".vi_cont li img").css({"opacity":"0.1"})
+//                $(".vi_cont li img").stop().animate({"opacity":"1"},2000);
+                $(".vi_cont li:nth-child(1) img:nth-of-type(1)").css({"top":400,"left":376}).animate({"opacity":1,"top":118,"left":376},800)
+                $(".vi_cont li:nth-child(1) img:nth-of-type(2)").css({"top":-130,"left":376}).animate({"opacity":1,"top":32,"left":376},800)
+                $(".vi_cont li:nth-child(1) img:nth-of-type(3)").css({"top":22,"left":680}).animate({"opacity":1,"top":22,"left":496},  800)
+
+                $(".vi_cont li:nth-child(2) img:nth-of-type(1)").css({"top":48, "left":226}).animate({"opacity":1,"top":48 ,"left":376},1000)
+                $(".vi_cont li:nth-child(2) img:nth-of-type(2)").css({"top":0, "left":386}).animate({"opacity":1,"top":80 ,"left":386},1000)
+                $(".vi_cont li:nth-child(2) img:nth-of-type(3)").css({"top":167, "left":680}).animate({"opacity":1,"top":167,"left":500},1000)
+
+                $(".vi_cont li:nth-child(3) img:nth-of-type(1)").css({"top":38,"left":258}).animate({"opacity":1,"top":38 ,"left":358},1000)
+                $(".vi_cont li:nth-child(3) img:nth-of-type(2)").css({"top":260,"left":450}).animate({"opacity":1,"top":180,"left":450},1000)
+                $(".vi_cont li:nth-child(3) img:nth-of-type(3)").css({"top":44,"left":680}).animate({"opacity":1,"top":44 ,"left":420},1000)
+
+                $(".vi_cont li:nth-child(4) img:nth-of-type(1)").css({"top":150,"left":680}).animate({"opacity":1,"top":150, "left":534},1000)
+                $(".vi_cont li:nth-child(4) img:nth-of-type(2)").css({"top":42,"left":250}).animate({"opacity":1,"top":42,  "left":350},1000)
+                $(".vi_cont li:nth-child(4) img:nth-of-type(3)").css({"top":0,"left":330}).animate({"opacity":1,"top":50,  "left":330},1000)
+
+                $(".vi_cont li:nth-child(5) img:nth-of-type(1)").css({"top":190,"left":210}).animate({"opacity":1,"top":190,"left":360},1000)
+                $(".vi_cont li:nth-child(5) img:nth-of-type(2)").css({"top":172,"left":680}).animate({"opacity":1,"top":172,"left":526},1000)
+                $(".vi_cont li:nth-child(5) img:nth-of-type(3)").css({"top":260,"left":382}).animate({"opacity":1,"top":36, "left":382},1000)
+
+        }
         function auto() {
             sn++;
             if( sn >= 5){
                 $(".visual_slide ul").stop().animate({"left":-700 * sn},300,function(){
+                cont();
                 sn = 0;
-                $(this).css({"left":0})
-                $("span b").text(1)
+                $(this).css({"left":0});
+                $("span b").text(1);
                 })
             }else{
                 $(".visual_slide ul").stop().animate({"left":-700 * sn},300)
-                $("span b").text(sn + 1)
+                $("span b").text(sn + 1);
+                cont();
             }
         }
         var timer = setInterval("auto()",3000)
@@ -387,23 +429,33 @@
             clearInterval(timer)
             if(sn <= 0){
             sn = 5;
-            $(".visual_slide ul").css({"left":-700 * sn}).stop().animate({"left":-700 * (sn - 1)},300)
-                $("span b").text(5)
+            $(".visual_slide ul").css({"left":-700 * sn}).stop().animate({"left":-700 * (sn - 1)},300);
+            cont();
+            $("span b").text(5);
             }else{
-                $(".visual_slide ul").stop().animate({"left":-700 * (sn - 1)},300)
-                $("span b").text(sn)
+                $(".visual_slide ul").stop().animate({"left":-700 * (sn - 1)},300);
+                $("span b").text(sn);
             }
             sn--;
-            timer = setInterval("auto()",3000);
+            $(".stop").css({"display":"none"});
+            $(".play").css({"display":"block"});
         })
         $(".next").click(function(){
             clearInterval(timer)
             auto();
-            timer = setInterval("auto()",3000)
+            $(".stop").css({"display":"none"});
+            $(".play").css({"display":"block"});
         })
         $(".stop").click(function(){
             clearInterval(timer);
-            $(this).children("img").attr("src","images/main/btn-play.png")
+            $(this).css({"display":"none"});
+            $(".play").css({"display":"block"});
+        })
+
+        $(".play").click(function(){
+            timer = setInterval("auto()",3000)
+            $(this).css({"display":"none"});
+            $(".stop").css({"display":"block"});
         })
 
 
