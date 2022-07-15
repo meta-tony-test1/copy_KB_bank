@@ -57,6 +57,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:12px; }
 a { color:inherit; text-decoration: none;}
 img {vertical-align: top;}
 .wrap { width: 1080px; margin:0 auto; position: relative;}
+.blind { display: none; position: absolute; left: -9999px; width: 0;}
 
 ul:after, .wrap:after, section:after { content:""; clear: both; display: block;}
 
@@ -105,41 +106,40 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 
 /* 메인비주얼 슬라이드 */
 #visual { margin: 40px 0 80px; color: #21201d; }
-#visual .visual_slide {position: relative; width: 672px; height: 260px; border-radius: 10px; overflow: hidden; float: left;}
-#visual .visual_slide ul { width: 4200px; position: relative;}
-#visual .visual_slide ul li { width: 700px; height: 260px; float: left; padding: 34px 82px 0; position: relative;}
-#visual .visual_slide ul li img { position: absolute; top: 0; right: 0; opacity: 1;}
+#visual .visual_slide {position: relative; width: 672px; height: 260px; overflow: hidden; float: left; border-radius: 10px;}
+#visual .visual_slide .vi_cont { width: 4200px; position: relative;}
+#visual .visual_slide .vi_cont li { width: 700px; height: 260px; float: left; padding: 34px 82px 0; position: relative;}
+#visual .visual_slide .vi_cont li figure { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+#visual .visual_slide .vi_cont li figure img { position: absolute; top: 0; right: 0; opacity: 1;}
 
-#visual .visual_slide ul li:nth-child(1) { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
+#visual .visual_slide ul .rock { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
 /* 스크립트 미작동시 기본위치값*/
-#visual .visual_slide ul li:nth-child(1) img:nth-of-type(1) { top: 118px;left: 376px; opacity: 0.1; }
-#visual .visual_slide ul li:nth-child(1) img:nth-of-type(2) { top: 32px; left: 376px; opacity: 0.1; }
-#visual .visual_slide ul li:nth-child(1) img:nth-of-type(3) { top: 22px; left: 496px; opacity: 0.1; }
+#visual .visual_slide ul .rock figure img:nth-of-type(1) { top: 118px;left: 376px; opacity: 0.1; }
+#visual .visual_slide ul .rock figure img:nth-of-type(2) { top: 32px; left: 376px; opacity: 0.1; }
+#visual .visual_slide ul .rock figure img:nth-of-type(3) { top: 22px; left: 496px; opacity: 0.1; }
 
-#visual .visual_slide ul li:nth-child(2) { background:url(../images/main/pc-expresstrain-bg.png)no-repeat left top  ;}
-#visual .visual_slide ul li:nth-child(2) img:nth-of-type(1) { top: 48px; left: 376px; }
-#visual .visual_slide ul li:nth-child(2) img:nth-of-type(2) { top: 80px; left: 386px; }
-#visual .visual_slide ul li:nth-child(2) img:nth-of-type(3) { top: 167px;left:500px; }
+#visual .visual_slide ul .airport { background:url(../images/main/pc-expresstrain-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul .airport figure img:nth-of-type(1) { top: 48px; left: 376px; }
+#visual .visual_slide ul .airport figure img:nth-of-type(2) { top: 80px; left: 386px; }
+#visual .visual_slide ul .airport figure img:nth-of-type(3) { top: 167px;left:500px; }
 
-#visual .visual_slide ul li:nth-child(3) { background:url(../images/main/pc-travel-bg.png)no-repeat left top  ;}
-#visual .visual_slide ul li:nth-child(3) img:nth-of-type(1) { top: 38px; left: 358px; z-index: 1;}
-#visual .visual_slide ul li:nth-child(3) img:nth-of-type(2) { top: 180px;left: 450px; }
-#visual .visual_slide ul li:nth-child(3) img:nth-of-type(3) { top: 44px; left: 420px; }
+#visual .visual_slide ul .trip { background:url(../images/main/pc-travel-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul .trip figure img:nth-of-type(1) { top: 38px; left: 358px; z-index: 1;}
+#visual .visual_slide ul .trip figure img:nth-of-type(2) { top: 180px;left: 450px; }
+#visual .visual_slide ul .trip figure img:nth-of-type(3) { top: 44px; left: 420px; }
 
-#visual .visual_slide ul li:nth-child(4) { background:url(../images/main/pc-starshop-bg.png)no-repeat left top  ;}
-#visual .visual_slide ul li:nth-child(4) img:nth-of-type(1) { top: 150px; left: 534px; z-index: 2; }
-#visual .visual_slide ul li:nth-child(4) img:nth-of-type(2) { top: 42px;  left: 350px; z-index: 1; }
-#visual .visual_slide ul li:nth-child(4) img:nth-of-type(3) { top: 50px;  left: 330px; }
+#visual .visual_slide ul .ptree { background:url(../images/main/pc-starshop-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul .ptree figure img:nth-of-type(1) { top: 150px; left: 534px; z-index: 2; }
+#visual .visual_slide ul .ptree figure img:nth-of-type(2) { top: 42px;  left: 350px; z-index: 1; }
+#visual .visual_slide ul .ptree figure img:nth-of-type(3) { top: 50px;  left: 330px; }
 
-#visual .visual_slide ul li:nth-child(5) { background:url(../images/main/pc-legolandCard-bg.png)no-repeat left top  ;}
-#visual .visual_slide ul li:nth-child(5) img:nth-of-type(1) { top: 190px; left: 360px; width: 120px; z-index: 1;}
-#visual .visual_slide ul li:nth-child(5) img:nth-of-type(2) { top: 172px; left: 526px; width: 68px; z-index: 1;}
-#visual .visual_slide ul li:nth-child(5) img:nth-of-type(3) { top: 36px;  left: 382px; }
-/*첫번째 배경*/
-#visual .visual_slide ul li:last-child { background:url(../images/main/pc-pentaport-bg.png)no-repeat left top ;}
+#visual .visual_slide ul .lego { background:url(../images/main/pc-legolandCard-bg.png)no-repeat left top  ;}
+#visual .visual_slide ul .lego figure img:nth-of-type(1) { top: 190px; left: 360px; width: 120px; z-index: 1;}
+#visual .visual_slide ul .lego figure img:nth-of-type(2) { top: 172px; left: 526px; width: 68px; z-index: 1;}
+#visual .visual_slide ul .lego figure img:nth-of-type(3) { top: 36px;  left: 382px; }
 /* 비주얼 슬라이드 버튼 */
-#visual .visual_slide ul li span { font-size: 16px; }
-#visual .visual_slide ul li p { font-size: 26px; padding-top: 24px; font-weight: 500;}
+#visual .visual_slide .vi_cont li span { font-size: 16px; }
+#visual .visual_slide .vi_cont li p { font-size: 26px; padding-top: 24px; font-weight: 500;}
 #visual .visual_slide > .prev { position: absolute; top:120px; left:30px;}
 #visual .visual_slide > .next { position: absolute; top:120px; right:30px}
 #visual .visual_slide > .stop { position: absolute; bottom:20px; left: 356px; }
@@ -174,6 +174,31 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #visual .log > div > p > a { font-size: 12px; line-height: 44px; font-weight: 300; color: #222;}
 #visual .log > div > a.btn_y { display: block; background: #fc0; line-height: 43px; width: 100%; border-radius: 4px; text-align: center; font-size: 14px;}
 
+
+#card { background: #f4f6fa; padding: 40px 0; color: #222;}
+#card .icon_bar ul { height: 68px; display: flex; justify-content: space-between;  text-align: center; font-weight: 300;}
+#card .icon_bar ul li { background: #fff; float: left; width: 135px; padding-top: 52px;}
+#card .icon_bar ul li:nth-child(1) { background: url(../images/main/ico-write.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(2) { background: url(../images/main/ico-eshopping.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(3) { background: url(../images/main/ico-checkpaper.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(4) { background: url(../images/main/ico-coin-48.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(5) { background: url(../images/main/ico-call-48.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(6) { background: url(../images/main/ico-cardregister-48.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(7) { background: url(../images/main/ico-point-48.png)no-repeat center top;}
+#card .icon_bar ul li:nth-child(8) { background: url(../images/main/ico-certificate-48.png)no-repeat center top;}
+
+#card .main_card { margin-top: 44px; height: 394px; background: #fff; text-align: center; border-radius: 20px; overflow: hidden;}
+#card .main_card > ul { padding-left: 20px;}
+#card .main_card > ul li { float: left; line-height: 82px; margin: 0 12px; font-size: 16px;}
+#card .main_card > div { height: 312px;}
+
+#card .main_card > div > ul li {height: 312px; width: 350px; float: left;}
+#card .main_card > div > ul li figure  {height: 202px; display: flex; justify-content: center; align-items: center;}
+#card .main_card > div > ul li figure img {transform:rotate(90deg); height: 128px; vertical-align: center;}
+#card .main_card > div.premium > ul li figure img {transform:rotate(0); height: 128px; vertical-align: center;}
+
+#card .main_card > div > ul li p { font-size: 16px;  margin: 20px 0;}
+#card .main_card > div > ul li span {color: #333; font-weight: 300;}
 
 
 /* 임시 스크롤*/
