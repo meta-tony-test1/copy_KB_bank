@@ -196,6 +196,7 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #card .main_card > div > ul li {height: 312px; width: 350px; float: left;}
 #card .main_card > div > ul li figure  {height: 202px; display: flex; justify-content: center; align-items: center;}
 #card .main_card > div > ul li figure img {transform:rotate(90deg); height: 128px; vertical-align: center;}
+#card .main_card > div > ul li.turn figure img {transform:rotate(0);}
 #card .main_card > div.premium > ul li figure img {transform:rotate(0); height: 128px; vertical-align: center;}
 
 #card .main_card > div > ul li p { font-size: 16px;  margin: 20px 0;}
@@ -217,6 +218,32 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #card .loan > ul li:nth-child(3) { background: #fff url(../images/main/ico-repaymentloan.png)no-repeat 104px center;}
 #card .loan > ul li:nth-child(4) { background: #fff url(../images/main/ico-delivery.png)no-repeat 104px center;}
 #card .loan > ul li:nth-child(2n) {margin-right: 0;}
+
+#benefit {}
+#benefit .shop { background: #f9fafc; line-height: 63px; text-align: center; border-radius: 30px; }
+#benefit .shop img { vertical-align: middle; }
+#benefit .shop:after { content:""; clear:both; display:block; }
+#benefit .shop span { width: 360px; float: left; position: relative;}
+#benefit .shop span:after { content: "|"; position: absolute; right: 0;}
+#benefit .shop span:last-child:after { display: none; }
+
+#benefit .wrap > ul {float: left;}
+#benefit .wrap > ul li { float: left; width: 252px; height: 152px; margin-right: 24px; position: relative; border-radius: 20px; padding: 24px;}
+#benefit .wrap > ul li:after { content:""; width: 120px; height: 100%; position: absolute; right: 8px; top: 0;}
+#benefit .wrap > ul li:nth-child(1) { background-image: linear-gradient(119deg, #dbecff, #ebf6ff 100%); }
+#benefit .wrap > ul li:nth-child(1):after { background:url(../images/main/img-main-brn-02.png)no-repeat left center; }
+#benefit .wrap > ul li:nth-child(2):after { background:url(../images/main/img-main-brn-03.png)no-repeat left center;  }
+#benefit .wrap > ul li:nth-child(2) {  background-image: linear-gradient(119deg, #eaebff, #f1f2ff 100%); }
+#benefit .wrap > ul li:nth-child(3):after { background:url(../images/main/img-main-brn-01.png)no-repeat left center; }
+#benefit .wrap > ul li:nth-child(3) { background-image: linear-gradient(119deg, #ffdf74, #ffebb2 100%);}
+#benefit .wrap > ul li p {font-size: 18px; padding-bottom: 24px; font-weight: 400; color: #1e1f21;}
+#benefit .wrap > ul li span { font-size: 13px; line-height: 1.6; color: #1e1f21;}
+
+#benefit .easy {float: right; width: 252px; height: 152px; background: #f9fafc; border-radius: 20px; padding: 32px 24px;}
+#benefit .easy span {display: block; line-height: 24px; padding-left: 36px;}
+#benefit .easy span:nth-child(1) { background: url(../images/main/ico-apt-48.png)no-repeat left center;}
+#benefit .easy span:nth-child(2) { background: url(../images/main/ico-1-airline2.png)no-repeat left center;  margin: 12px 0;}
+#benefit .easy span:nth-child(3) { background: url(../images/main/ico-1-alarm.png)no-repeat left center;}
 
 /* 임시 스크롤*/
 .scroll { height: 8000px; background: #fee;}
