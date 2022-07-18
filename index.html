@@ -460,11 +460,12 @@
                 </li>
             </ul>
         </div>
+        <h3 class="mob">추천카드</h3>
         <div class="main_card">
             <ul>
-               <li>신용카드</li>
-               <li>체크카드</li>
-               <li class="pc">프리미엄카드</li>
+               <li><a href="#-" class="under" >신용<i class="pc">카드</i></a></li>
+               <li><a href="#-">체크<i class="pc">카드</i></a></li>
+               <li class="pc"><a href="#-">프리미엄카드</a></li>
             </ul>
             <div class="credit">
                 <ul>
@@ -562,18 +563,18 @@
             </div>
         </div>
 
-        <div class="loan">
+        <div class="loan pc">
             <dl>
                 <dt>단기카드대출</dt>
                 <dd>현금이 필요할 때<br>
                     24시간 365일 1만원부터</dd>
-                <dd><a href="#">자세히보기</a></dd>
+                <dd><a href="#">자세히보기 ></a></dd>
             </dl>
             <dl>
                 <dt>장기카드대출</dt>
                 <dd>복잡한 서류 중도상환 이자없이<br>
                     간편하게 신청</dd>
-                <dd><a href="#">자세히보기</a></dd>
+                <dd><a href="#">자세히보기 ></a></dd>
             </dl>
             <ul>
                 <li><a href="#">KB국민<br>신용대출</a></li>
@@ -583,6 +584,58 @@
             </ul>
 
         </div>
+        <ul class="btn_m mob">
+            <li><a href="#">카드 한눈에 보기</a></li>
+            <li><a href="#">간편하게 신청</a></li>
+            <li><a href="#">신속발급 서비스</a></li>
+            <li><a href="#">전화 신청</a></li>
+        </ul>
+        <h3 class="mob">금융</h3>
+        <ul class="fin_loan mob">
+            <li>
+                <h4><a href="#">장기카드대출 ></a></h4>
+                <p>복잡한 서류와 중도상환 이자없이 간편하게</p>
+                <span>가능금액<br><i>최대<b>5,000</b>만원</i></span>
+                <span>연 이자율<br><b>3.90~19.90%</b></span>
+                <a href="#">신청</a>
+            </li>
+            <li>
+                <h4><a href="#">신용카드 비최원 시용대출 ></a></h4>
+                <p>신용도에 따라 쉽고 빠르게</p>
+                <span>가능금액<br><i>최대<b>3,000</b>만원</i></span>
+                <span>연 이자율<br><b>5.90~19.90%</b></span>
+                <a href="#">신청</a>
+            </li>
+            <li>
+                <h4><a href="#">단기카드대출 ></a></h4>
+                <p>현금이 필요할 때 24시간 365일</p>
+                <span>가능금액<br><i>최대<b>800</b>만원</i></span>
+                <span>연 이자율<br><b>5.90~19.95%</b></span>
+                <a href="#">신청</a>
+            </li>
+            <li>
+                <h4><a href="#">일부결제금액이월약정 ></a></h4>
+                <p>카드결제금액이 부담될때 최소결제</p>
+                <span>연 이자율<br><b>5.60~19.95%</b></span>
+                <a href="#">신청</a>
+            </li>
+            <li>
+                <span>연 이자율은 개인신용평점별 차등적용됩니다.</span>
+            </li>
+        </ul>
+
+        <ul class="fin_lease mob">
+            <li>
+                <p>자동차 금융
+                <span>쉽고 편리하게 새차, 중고차 모두 ok</span>
+                </p>
+            </li>
+            <li>
+                <p>올리스 금융
+                <span>휴대폰, iPad도 리스로 부담 없이</span>
+                </p>
+            </li>
+        </ul>
         </div>
     </section>
     <div class="scroll"></div>
@@ -705,7 +758,7 @@
                     "left": -sw * sn
                 }, 200);
             }
-            $("span b").text(sn + 1);
+            $(".vi_cont span b").text(sn + 1);
             cont();
             }
 
@@ -721,12 +774,12 @@
                         "left": -sw * (sn - 1)
                     }, 200);
                     cont();
-                    $("span b").text(5);
+                    $(".vi_cont span b").text(5);
                 } else {
                     $(".visual_slide ul").stop().animate({
                         "left": -sw * (sn - 1)
                     }, 200);
-                    $("span b").text(sn);
+                    $(".vi_cont span b").text(sn);
                     cont();
                 }
                 sn--;
@@ -828,7 +881,7 @@
                 }, 200);
                 $(".m_nav li").eq(sn).addClass("m_on").siblings().removeClass("m_on");
             }
-            $("span b").text(sn + 1);
+            $(".vi_cont span b").text(sn + 1);
             cont();
 
             }
@@ -845,14 +898,14 @@
                         "left": -sw * (sn - 1)
                     }, 200);
                     cont();
-                    $("span b").text(5);
+                    $(".visual_slide span b").text(5);
                     $(".m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
 
                 } else {
                     $(".visual_slide .vi_cont").stop().animate({
                         "left": -sw * (sn - 1)
                     }, 200);
-                    $("span b").text(sn);
+                    $(".vi_cont span b").text(sn);
                     $(".m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
                     cont();
                 }
