@@ -349,10 +349,10 @@
                         </figure>
                     </li>
                 </ul>
-                <a href="#" class="prev"><img src="images/main/arr-1-left.png" alt="이전"></a>
-                <a href="#" class="next"><img src="images/main/arr-1-right.png" alt="다음"></a>
-                <a href="#" class="stop"><img src="images/main/btn-stop.png" alt="사진 고정"></a>
-                <a href="#" class="play"><img src="images/main/btn-play.png" alt="사진 고정"></a>
+                <a href="#+" class="prev"><img src="images/main/arr-1-left.png" alt="이전"></a>
+                <a href="#+" class="next"><img src="images/main/arr-1-right.png" alt="다음"></a>
+                <a href="#+" class="stop"><img src="images/main/btn-stop.png" alt="사진 고정"></a>
+                <a href="#+" class="play"><img src="images/main/btn-play.png" alt="사진 고정"></a>
                 <span class="pc"><b>1</b>/<i>5</i></span>
 
                 <ul class="mob m_nav">
@@ -488,7 +488,7 @@
                             <span>배달앱 결제시 50% 할인</span>
                         </a>
                     </li>
-                    <li  class="turn">
+                    <li class="turn">
                         <a href="#">
                            <figure>
                                <img src="images/main/09174_img.png" alt="">
@@ -550,6 +550,33 @@
                         <a href="#">
                            <figure>
                                <img src="images/main/01918_img.png" alt="">
+                           </figure>
+                            <p>위글위글 첵첵 체크카드</p>
+                            <span>줄 서서 발급하는 혜택 맛집!</span>
+                        </a>
+                    </li>
+                    <li class="mob turn">
+                        <a href="#">
+                           <figure>
+                               <img src="images/main/mob/01570_img.png" alt="">
+                           </figure>
+                            <p>위글위글 첵첵 체크카드</p>
+                            <span>줄 서서 발급하는 혜택 맛집!</span>
+                        </a>
+                    </li>
+                    <li class="mob turn">
+                        <a href="#">
+                           <figure>
+                               <img src="images/main/mob/01582_img.png" alt="">
+                           </figure>
+                            <p>위글위글 첵첵 체크카드</p>
+                            <span>줄 서서 발급하는 혜택 맛집!</span>
+                        </a>
+                    </li>
+                    <li class="mob">
+                        <a href="#">
+                           <figure>
+                               <img src="images/main/mob/01774_img.png" alt="">
                            </figure>
                             <p>위글위글 첵첵 체크카드</p>
                             <span>줄 서서 발급하는 혜택 맛집!</span>
@@ -712,20 +739,20 @@
         <div class="easy">
             <span>
                 생활대금납부<br>
-                <i>자동납부를 편리하게 한번에 신청</i>
+                <i class="mob">자동납부를 편리하게 한번에 신청</i>
             </span>
             <span>
                 해외이용<br>
-                <i>해외에서도 편리하고, 안전하게 사용</i>
+                <i class="mob">해외에서도 편리하고, 안전하게 사용</i>
             </span>
             <span>
                 카드사용알림<br>
-                <i>이용내역을 실시간으로 편리하게 확인</i>
+                <i class="mob">이용내역을 실시간으로 편리하게 확인</i>
             </span>
         </div>
 
         <div class="friends_slide mob">
-            <ul>
+            <ul class="m_cont">
                 <li>
                     <p>STAR FRIENDS</p>
                     <span>함께여서 날마다 새로운<br>스타프렌즈</span>
@@ -735,11 +762,22 @@
                     <span>국내외 여행상품<br>항공,여행,숙박까지!</span>
                 </li>
             </ul>
+                <a href="#+" class="prev"><img src="images/main/arr-1-left.png" alt="이전"></a>
+                <a href="#+" class="next"><img src="images/main/arr-1-right.png" alt="다음"></a>
+                <a href="#+" class="stop"><img src="images/main/btn-stop.png" alt="사진 고정"></a>
+                <a href="#+" class="play"><img src="images/main/btn-play.png" alt="사진 고정"></a>
+
+                <ul class="mob m_nav">
+                    <li class="m_on"></li>
+                    <li></li>
+                </ul>
         </div>
 
         </div>
     </section>
-    <div class="scroll"></div>
+    <div class="scroll">
+
+    </div>
 
 
 
@@ -750,7 +788,6 @@
         var bw = $("body").width();
         $(window).resize(function() {
             bw = $("body").width();
-//            console.log(bw);
         });
 
         var n;
@@ -759,6 +796,14 @@
         var sn = 0;
 
 
+
+        /* 카드 소개 배너 */
+        var cn;
+        $(".main_card > ul li a").click(function(){
+            $(this).addClass("under").parent("li").siblings().children("a").removeClass("under");
+            cn = $(this).parent("li").index();
+        $(".main_card > div ").eq(cn).css({"display":"block"}).siblings("div").css({"display":"none"})
+        })
 
         if (bw >= 801) { //PC 스크립트
             /* 슬라이드 배너 */
@@ -876,6 +921,7 @@
                     }, 200);
                     cont();
                     $(".vi_cont span b").text(5);
+
                 } else {
                     $(".visual_slide ul").stop().animate({
                         "left": -sw * (sn - 1)
@@ -968,11 +1014,12 @@
 
 
             /* 슬라이드 효과*/
+
             function auto() {
             sn++;
             if (sn >= 5) {
                 $(".visual_slide .vi_cont").stop().animate({"left": -sw * sn}, 200, function() {
-                $(".m_nav li").eq(sn).addClass("m_on").siblings().removeClass("m_on");
+                $("#visual .m_nav li").eq(sn).addClass("m_on").siblings().removeClass("m_on");
                 $(this).stop().css({"left": 0});
                 })
                 sn = 0;
@@ -980,16 +1027,16 @@
                 $(".visual_slide .vi_cont").stop().animate({
                     "left": -sw * sn
                 }, 200);
-                $(".m_nav li").eq(sn).addClass("m_on").siblings().removeClass("m_on");
+                $("#visual .m_nav li").eq(sn).addClass("m_on").siblings().removeClass("m_on");
             }
-            $(".vi_cont span b").text(sn + 1);
+            $("#visual .vi_cont span b").text(sn + 1);
             cont();
 
             }
 
             var timer = setInterval("auto()", 3000)
 
-            $(".prev").click(function() {
+            $("#visual .prev").click(function() {
                 clearInterval(timer)
                 if (sn <= 0) {
                     sn = 5;
@@ -1000,35 +1047,36 @@
                     }, 200);
                     cont();
                     $(".visual_slide span b").text(5);
-                    $(".m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
+
+                    $("#visual .m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
 
                 } else {
                     $(".visual_slide .vi_cont").stop().animate({
                         "left": -sw * (sn - 1)
                     }, 200);
                     $(".vi_cont span b").text(sn);
-                    $(".m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
+                    $("#visual .m_nav li").eq(sn - 1).addClass("m_on").siblings().removeClass("m_on");
                     cont();
                 }
                 sn--;
-                $(".stop").css({
+                $("#visual .stop").css({
                     "display": "none"
                 });
-                $(".play").css({
+                $("#visual .play").css({
                     "display": "block"
                 });
             })
-            $(".next").click(function() {
+            $("#visual .next").click(function() {
                 clearInterval(timer);
                 auto();
-                $(".stop").css({
+                $("#visua .stop").css({
                     "display": "none"
                 });
-                $(".play").css({
+                $("#visua .play").css({
                     "display": "block"
                 });
             })
-            $(".stop").click(function() {
+            $("#visual .stop").click(function() {
                 clearInterval(timer);
                 $(this).css({
                     "display": "none"
@@ -1038,20 +1086,104 @@
                 });
             })
 
-            $(".play").click(function() {
+            $("#visual .play").click(function() {
                 timer = setInterval("auto()", 3000)
                 $(this).css({
                     "display": "none"
                 });
-                $(".stop").css({
+                $("#visual .stop").css({
+                    "display": "block"
+                });
+            })
+            /* 네비 위치 이동*/
+            $(".m_nav li").click(function(){
+                sn = $(this).index();
+                console.log(sn);
+                clearInterval(timer);
+                auto();
+            })
+
+            /* 스타프렌즈 슬라이드*/
+            var m_sn = 1;
+            var m_sw = $(".friends_slide .m_cont li").innerWidth();
+
+            var s_nav = $(".m_cont li:last-child").index();
+
+            $(".friends_slide .m_cont").append($(".friends_slide .m_cont li:first-child").clone());
+
+            function m_slide() {
+                if(m_sn>=2){
+                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},1000,function(){
+                        $(this).css({"left":0})
+                    $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
+                });
+                m_sn = 1;
+                }else{
+                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},1000);
+                    $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
+                }
+            }
+            var m_auto = setInterval("m_slide()",2000)
+
+            /* 슬라이드 카피 */
+            $("#benefit .prev").click(function() {
+                console.log(m_sn)
+                clearInterval(m_auto) /* 버튼 클릭시 재생 중지*/
+                if (m_sn <= 1) {
+                    m_sn = 2;
+
+                    $(".friends_slide .m_cont").css({"left": -m_sw * m_sn}).stop().
+                    animate({"left": -m_sw * (m_sn - 1)}, 1000);
+
+                    $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
+
+                } else {
+                    m_sn--;
+                    $(".friends_slide .m_cont").stop().animate({
+                        "left": -m_sw * (m_sn - 1)
+                    }, 1000);
+
+                    $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
+                }
+
+                $("#benefit .stop").css({
+                    "display": "none"
+                });
+                $("#benefit .play").css({
                     "display": "block"
                 });
             })
 
-            /* 스타프렌즈 슬라이드*/
-            $(".friends_slide ul").append($(".friends_slide ul li:first-child")).clone();
 
+            $("#benefit .next").click(function() {
+                clearInterval(m_auto); /* 버튼 클릭시 재생 중지*/
+                m_slide();
+                $("#benefit .stop").css({
+                    "display": "none"
+                });
+                $("#benefit .play").css({
+                    "display": "block"
+                });
+            })
+            $("#benefit .stop").click(function() {
+                clearInterval(m_auto);
+                $(this).css({
+                    "display": "none"
+                });
+                $("#benefit .play").css({
+                    "display": "block"
+                });
+            })
 
+            $("#benefit .play").click(function() {
+                m_auto = setInterval("m_slide()", 2000)
+                $(this).css({
+                    "display": "none"
+                });
+                $("#benefit .stop").css({
+                    "display": "block"
+                });
+            })
 
         }
 

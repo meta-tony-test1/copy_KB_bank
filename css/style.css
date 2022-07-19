@@ -220,7 +220,7 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #card .loan > ul li:nth-child(2n) {margin-right: 0;}
 
 #benefit {}
-#benefit .shop { background: #f9fafc; line-height: 63px; text-align: center; border-radius: 30px; }
+#benefit .shop { background: #f9fafc; line-height: 63px; text-align: center; border-radius: 30px; margin: 40px 0;}
 #benefit .shop img { vertical-align: middle; }
 #benefit .shop:after { content:""; clear:both; display:block; }
 #benefit .shop span { width: 360px; float: left; position: relative;}
@@ -245,5 +245,7 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #benefit .easy span:nth-child(2) { background: url(../images/main/ico-1-airline2.png)no-repeat left center;  margin: 12px 0;}
 #benefit .easy span:nth-child(3) { background: url(../images/main/ico-1-alarm.png)no-repeat left center;}
 
-/* 임시 스크롤*/
-.scroll { height: 8000px; background: #fee;}
+
+
+
+.scroll { background: #eef; height: 4040px; width: 100%;}
