@@ -775,6 +775,102 @@
 
         </div>
     </section>
+    <section id="notice">
+      <h2 class="blind">새소식 및 안내 영역</h2>
+       <div class="wrap">
+        <div class="news">
+           <h3>새소식 ></h3>
+            <table>
+                <tr>
+                    <td>2021.12.20</td>
+                    <td>홈페이지 오류 시 조치방법 안내</td>
+                </tr>
+                <tr>
+                    <td>2021.03.23</td>
+                    <td>「금융소비자 보호에 관현 법률」시행안내</td>
+                </tr>
+                <tr>
+                    <td>2022.07.19</td>
+                    <td>KB국민카드 고객센터 카드발급 아웃바운드TM 용역업체 선정 재공고</td>
+                </tr>
+            </table>
+        </div>
+        <div class="info pc">
+            <ul>
+                <li class="under">소비자정보포털</li>
+                <li>자주하는 질문</li>
+                <li>해외이용종합안내</li>
+            </ul>
+
+            <dl>
+                <dt>소비자정보포털</dt>
+                <dd>금융소비자로서 보호를 받으세요</dd>
+            </dl>
+            <dl>
+                <dt>자주하는 질문</dt>
+                <dd>궁금하신 내용을 확인해보세요</dd>
+            </dl>
+            <dl>
+                <dt>해외이용종합안내</dt>
+                <dd>해외에서도 안전하게 이용하세요</dd>
+            </dl>
+
+        </div>
+        </div>
+        <div class="wrap">
+        <div class="call pc">
+            <h3>고객센터 1588-1688</h3>
+            <table>
+                <tr>
+                    <td>카드신청</td>
+                    <td>1899-0077</td>
+                    <td>분실신고 가맹점 승인</td>
+                    <td>1588-1788</td>
+                    <td>English/中國語</td>
+                    <td>1644-9993</td>
+                </tr>
+                <tr>
+                    <td>금융서비스</td>
+                    <td>1588-2788</td>
+                    <td>결제 및 각종변경(등록)</td>
+                    <td>1899-0800</td>
+                    <td>해외에서 전화 걸 때</td>
+                    <td>82-2-6300-7300</td>
+                </tr>
+            </table>
+            <a href="#"><span>이메일상담 ></span></a>
+            <a href="#"><span>고객제안 ></span></a>
+        </div>
+        <div class="app mob">
+           <h3>KB PLUS</h3>
+            <ul>
+                <li><a href="#">국민카드</a></li>
+                <li><a href="#">KB Pay</a></li>
+                <li><a href="#">리브메이트</a></li>
+                <li><a href="#">국카mall</a></li>
+                <li><a href="#">스타뱅킹</a></li>
+                <li><a href="#">리브 Next</a></li>
+                <li><a href="#">KB손해보험</a></li>
+            </ul>
+            <p>
+                <span><a href="#">스타샵 ></a></span>
+                <span><a href="#">골든라이프 ></a></span>
+            </p>
+        </div>
+        <div class="m_sns mob">
+            <h3>KB국민카드 소셜 서비스</h3>
+            <ul>
+                <li><a href="#">유튜브</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">인스타그램</a></li>
+                <li><a href="#">페이스북</a></li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
     <div class="scroll">
 
     </div>
@@ -1069,10 +1165,10 @@
             $("#visual .next").click(function() {
                 clearInterval(timer);
                 auto();
-                $("#visua .stop").css({
+                $("#visual .stop").css({
                     "display": "none"
                 });
-                $("#visua .play").css({
+                $("#visual .play").css({
                     "display": "block"
                 });
             })
@@ -1097,10 +1193,15 @@
             })
             /* 네비 위치 이동*/
             $(".m_nav li").click(function(){
-                sn = $(this).index();
-                console.log(sn);
+                sn = $(this).index() -1 ;
                 clearInterval(timer);
                 auto();
+                $("#visual .stop").css({
+                    "display": "none"
+                });
+                $("#visual .play").css({
+                    "display": "block"
+                });
             })
 
             /* 스타프렌즈 슬라이드*/
@@ -1113,13 +1214,13 @@
 
             function m_slide() {
                 if(m_sn>=2){
-                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},1000,function(){
+                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},500,function(){
                         $(this).css({"left":0})
                     $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
                 });
                 m_sn = 1;
                 }else{
-                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},1000);
+                    $(".friends_slide .m_cont").stop().animate({"left":- m_sw * m_sn++},500);
                     $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
                 }
             }
@@ -1133,7 +1234,7 @@
                     m_sn = 2;
 
                     $(".friends_slide .m_cont").css({"left": -m_sw * m_sn}).stop().
-                    animate({"left": -m_sw * (m_sn - 1)}, 1000);
+                    animate({"left": -m_sw * (m_sn - 1)}, 500);
 
                     $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
 
@@ -1141,7 +1242,7 @@
                     m_sn--;
                     $(".friends_slide .m_cont").stop().animate({
                         "left": -m_sw * (m_sn - 1)
-                    }, 1000);
+                    }, 500);
 
                     $("#benefit .m_nav li").eq(m_sn - 1).addClass("m_on").siblings().removeClass("m_on");
                 }
@@ -1181,6 +1282,19 @@
                     "display": "none"
                 });
                 $("#benefit .stop").css({
+                    "display": "block"
+                });
+            })
+            /* 네비 위치 이동*/
+            $("#benefit .m_nav li").click(function(){
+                m_sn = $(this).index();
+                console.log(m_sn);
+                clearInterval(m_auto);
+                m_slide();
+                $("#benefit .stop").css({
+                    "display": "none"
+                });
+                $("#benefit .play").css({
                     "display": "block"
                 });
             })

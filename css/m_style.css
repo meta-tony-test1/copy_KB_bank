@@ -147,7 +147,7 @@
     #benefit .friends_slide .m_cont li p {font-size: 18px; padding-bottom: 24px;}
     #benefit .friends_slide .m_cont li span {font-size: 14px; line-height: 1.6;}
 
-    #benefit .friends_slide ul li:after {content: ""; position: absolute; right: 0; bottom: -20px; width: 328px; height: 200px;}
+    #benefit .friends_slide .m_cont li:after {content: ""; position: absolute; right: 0; bottom: -20px; width: 328px; height: 200px;}
     #benefit .friends_slide .m_cont li:nth-child(1),
     #benefit .friends_slide .m_cont li:last-child
         { background:url(../images/main/mob/img-bg-friends.png)no-repeat left bottom/cover;}
@@ -165,9 +165,33 @@
     /* 모바일 슬라이드 네비*/
     #benefit .m_nav { height: 12px; position: absolute; top: 166px; left: 50%; transform: translate(-100%)}
     #benefit .m_nav li { width: 6px; height: 6px; background: #cfcfd1; float: left; margin-right: 10px; border-radius: 20px; }
-    #benefit .m_nav li.m_on { width: 16px; background: #1f1f20;}
+    #benefit .m_nav li.m_on { width: 16px; background: #1f1f20; z-index: 999;}
     #benefit .m_nav li:last-child { margin-right: 0;}
 
+
+    #notice .news { width: auto; float: none;  margin-top: 44px;}
+    #notice .news table { margin-top: 38px; background: #fff; padding: 20px; display: block; border-radius: 10px; border: 1px solid #eee; box-shadow: 1px 2px 5px #e2e5e8; }
+    #notice .news table {margin-top: 22px; position: relative;}
+    #notice .news td:nth-child(1) { margin-right: 0;padding-right: 0; font-size: 12px; position: absolute; right: 20px;}
+    #notice .news td:nth-child(2) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; width: 50vw;}
+
+    #notice .news tr:first-child td { padding-bottom: 24px; }
+    #notice .news tr { width: 100%;}
+    #notice .news tr:last-child { display: none; }
+    #notice .news td { font-size: 14px;padding-bottom: 0;}
+
+    #notice .app {}
+    #notice .app h3 {}
+    #notice .app ul { margin-top: 44px; background: #fff; text-align: center; }
+    #notice .app ul li { float: left; width: calc(100% / 3); height: 84px; display: flex; align-items: flex-end; justify-content: center; }
+    #notice .app ul li:nth-child(1) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(2) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(3) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(4) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(5) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(6) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(7) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #notice .app p { margin-top: 44px}
 }
 @media (min-width:801px) { /* PC용 */
     .mob{ display:none;}

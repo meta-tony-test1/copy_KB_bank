@@ -53,7 +53,7 @@ table {
 }
 
 /* common */
-body { font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:12px; }
+body { font-family: 'Noto Sans KR', sans-serif; color:#222; font-size:12px; }
 a { color:inherit; text-decoration: none;}
 i { font-style: none;}
 img {vertical-align: top;}
@@ -149,7 +149,7 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 
 /* 로그인영역 */
 #visual .log ul { height: 22px; padding-top: 4px;}
-#visual .log ul li {float: left; margin-right: 34px; font-size: 14px; color: #222; position: relative;}
+#visual .log ul li {float: left; margin-right: 34px; font-size: 14px; position: relative;}
 #visual .log ul li.under { font-weight: 600; }
 #visual .log ul li:hover { font-weight: 600; }
 #visual .log ul li.under:after {content: ""; display:block; width: 100%; height: 3px; background: #000;position: absolute; bottom: -4px; left: 0;}
@@ -172,11 +172,11 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 
 #visual .log > div.cer .icon {height: 150px; background: url(../images/main/ico-browser-48.png)no-repeat center center;}
 
-#visual .log > div > p > a { font-size: 12px; line-height: 44px; font-weight: 300; color: #222;}
+#visual .log > div > p > a { font-size: 12px; line-height: 44px; font-weight: 300; }
 #visual .log > div > a.btn_y { display: block; background: #fc0; line-height: 43px; width: 100%; border-radius: 4px; text-align: center; font-size: 14px;}
 
 
-#card { background: #f4f6fa; padding: 40px 0; color: #222;}
+#card { background: #f4f6fa; padding: 40px 0; }
 #card .icon_bar ul { height: 68px; display: flex; justify-content: space-between;  text-align: center; font-weight: 300;}
 #card .icon_bar ul li { background: #fff; float: left; width: 135px; padding-top: 52px;}
 #card .icon_bar ul li:nth-child(1) { background: url(../images/main/ico-write.png)no-repeat center top;}
@@ -207,7 +207,7 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #card .loan dl { width: 344px; height: 176px; margin-right: 24px; float: left; padding: 24px 0 0 32px; background: #fff; margin-top: 24px; border-radius: 10px; border:1px solid #d8dade;  box-shadow: 1px 2px 5px #e2e5e8}
 #card .loan dl dt { font-size: 16px; color: #000;}
 #card .loan dl dd { margin-top: 20px; font-size: 13px; color: #666; line-height: 1.6;}
-#card .loan dl dd > a { color: #222; font-size: 12px;}
+#card .loan dl dd > a { font-size: 12px;}
 #card .loan dl:nth-child(1) { background: #fff url(../images/main/ico-eshopping.png)no-repeat 272px 104px;}
 #card .loan dl:nth-child(2) { background: #fff url(../images/main/ico-card-1.png)no-repeat 272px 104px;}
 
@@ -245,7 +245,30 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #benefit .easy span:nth-child(2) { background: url(../images/main/ico-1-airline2.png)no-repeat left center;  margin: 12px 0;}
 #benefit .easy span:nth-child(3) { background: url(../images/main/ico-1-alarm.png)no-repeat left center;}
 
+#notice h3 { font-size: 18px;}
+#notice .news { width: 50%; float: left;  margin-top: 44px;}
+#notice .news table { margin-top: 38px;}
+#notice .news td:first-child { padding-right: 20px; font-size: 12px; }
+#notice .news td { font-size: 14px;padding-bottom: 20px;}
 
+#notice .info { width: 50%; float: right; margin-top: 44px;}
+#notice .info ul li { float: left; font-size: 16px; margin-right: 24px; position: relative;}
+#notice .info ul li.under { font-weight: 500; }
+#notice .info ul li:hover { font-weight: 500; }
+#notice .info ul li.under:after {content: ""; display:block; width: 100%; height: 3px; background: #000;position: absolute; bottom: -10px; left: 0;}
+#notice .info ul li:hover:after {content: ""; display:block; width: 100%; height: 3px; background: #000;position: absolute; bottom: -10px; left: 0;}
 
+#notice .info dl { height: 106px; border-radius: 10px; display: none; padding: 20px 32px; color: #000; margin-top: 30px;}
+#notice .info dl:nth-of-type(1) { background: #f9fafc url(../images/main/ico-consumer-48.png)no-repeat 460px center; display: block;}
+#notice .info dl:nth-of-type(2) { background: #f9fafc url(../images/main/ico-faq-48.png)no-repeat 460px center;}
+#notice .info dl:nth-of-type(3) { background: #f9fafc url(../images/main/ico-foreign-48.png)no-repeat 460px center;}
+#notice .info dl dt { font-size:16px; font-weight: 400; line-height: 50px;}
+#notice .info dl dd { font-size:14px;}
 
-.scroll { background: #eef; height: 4040px; width: 100%;}
+#notice .call table { width: 828px; float: left; border-right: 1px solid #ebebeb; }
+#notice .call h3 { line-height: 80px; }
+#notice .call td { line-height: 1.8;}
+#notice .call td:nth-child(2n-1):before { content: "- "}
+#notice .call span { padding-left: 40px;}
+
+.scroll { background: #faa; height: 4040px; width: 100%;}
