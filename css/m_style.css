@@ -9,6 +9,60 @@
     .blank { height: 60px;}
     body {background: #f4f6fa;}
 
+    /*footer*/
+
+    footer  { border-top: none;  margin-top: 40px; background: #eff2f7; padding-bottom: 60px;}
+    footer dl dt { line-height: 32px;}
+
+    footer dl dd { font-weight: 300; color: #000; font-size: 11px;}
+    footer dl dd:nth-of-type(1) { background: url(../images/main/mob/ico-1-time.svg)no-repeat left center; padding-left: 24px; line-height: 32px;}
+    footer dl dd:nth-of-type(2) { background: url(../images/main/mob/ico-1-cs.svg)no-repeat left center; padding-left: 24px; line-height: 32px;   }
+
+    footer .f_info { border-top: 1px solid #ccc; margin-top: 40px; padding-top: 38px; text-align: center; }
+    footer .f_info ul { display: flex; justify-content: center;}
+    footer .f_info ul li { float: left;}
+    footer .f_info ul li:first-child:after { content: '|'; margin: 0 10px; font-size: 10px; position: relative; top: -2px; color: #c2c2c2; font-weight: 100;}
+    footer .f_info address { color: #666; margin-top: 27px;}
+    footer .f_info address > p { padding-bottom: 13px; color: #666}
+    footer .f_info > span { color: #999}
+
+    /* 메뉴 페이지 */
+    #m_menu { display: none;}
+    #m_menu > div { border:1px solid #ddd;}
+
+    #m_menu h3 { font-size: 20px; color: #000; padding-top: 48px; font-weight: 400;}
+    #m_menu .news { width: auto; float: none;  margin-top: 44px;}
+    #m_menu .news table { margin-top: 38px; background: #fff; padding: 20px; display: block; border-radius: 10px; border: 1px solid #eee; box-shadow: 1px 2px 5px #e2e5e8; }
+    #m_menu .news table {margin-top: 22px; position: relative;}
+    #m_menu .news td:nth-child(1) { margin-right: 0;padding-right: 0; font-size: 12px; position: absolute; right: 20px;}
+    #m_menu .news td:nth-child(2) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; width: 50vw;}
+
+    #m_menu .news tr:first-child td { padding-bottom: 24px; }
+    #m_menu .news tr { width: 100%;}
+    #m_menu .news tr:last-child { display: none; }
+    #m_menu .news td { font-size: 14px; padding-bottom: 0;}
+
+    #m_menu .app ul { margin-top: 44px; background: #fff; text-align: center; padding: 24px 16px; border: 1px solid #eee; box-shadow: 1px 2px 5px #e2e5e8; border-radius: 10px; font-size: 14px;}
+    #m_menu .app ul li { float: left; width: calc(100% / 3); height: 100px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px;}
+    #m_menu .app ul li:nth-child(1) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(2) {background: url(../images/main/mob/logo-app-kbpay-48.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(3) {background: url(../images/main/mob/logo-app-livvmate-48.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(4) {background: url(../images/main/mob/logo-app-kbmall-48.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(5) {background: url(../images/main/mob/logo-app-kbbank.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(6) {background: url(../images/main/mob/app_liivnext_32.png)no-repeat top center /48px ;}
+    #m_menu .app ul li:nth-child(7) {background: url(../images/main/mob/logo-app-kbdirect-48.png)no-repeat top center /48px ;}
+
+    #m_menu .m_sns { margin-top: 52px; }
+    #m_menu .m_sns ul { margin-top: 20px; }
+    #m_menu .m_sns ul li { float: left; height: 80px; background: #eff; width: 25%; padding-bottom: 10px; background-size: 48px;}
+    #m_menu .m_sns ul li:nth-child(1) {background: url(../images/main/mob/logo-yt.png)no-repeat center top/48px; }
+    #m_menu .m_sns ul li:nth-child(2) {background: url(../images/main/mob/logo-blog.png)no-repeat center top/48px;}
+    #m_menu .m_sns ul li:nth-child(3) {background: url(../images/main/mob/logo-insta.png)no-repeat center top/48px;}
+    #m_menu .m_sns ul li:nth-child(4) {background: url(../images/main/mob/logo-fb.png)no-repeat center top/48px;}
+    #m_menu .m_sns ul li a { display: block; height: 100%; display: flex; justify-content: center; align-items: flex-end; }
+
+
+
         /* 메인비주얼 슬라이드 */
     #visual {}
     #visual .visual_slide { width: 100%; height: 364px;}
@@ -178,21 +232,39 @@
     #notice .news tr:first-child td { padding-bottom: 24px; }
     #notice .news tr { width: 100%;}
     #notice .news tr:last-child { display: none; }
-    #notice .news td { font-size: 14px;padding-bottom: 0;}
+    #notice .news td { font-size: 14px; padding-bottom: 0;}
 
-    #notice .app {}
-    #notice .app h3 {}
-    #notice .app ul { margin-top: 44px; background: #fff; text-align: center; }
-    #notice .app ul li { float: left; width: calc(100% / 3); height: 84px; display: flex; align-items: flex-end; justify-content: center; }
+    #notice .app ul { margin-top: 44px; background: #fff; text-align: center; padding: 24px 16px; border: 1px solid #eee; box-shadow: 1px 2px 5px #e2e5e8; border-radius: 10px; font-size: 14px;}
+    #notice .app ul li { float: left; width: calc(100% / 3); height: 100px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px;}
     #notice .app ul li:nth-child(1) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(2) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(3) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(4) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(5) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(6) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app ul li:nth-child(7) {background: url(../images/main/mob/logo-app-kbcard-48.png)no-repeat top center /48px ;}
-    #notice .app p { margin-top: 44px}
+    #notice .app ul li:nth-child(2) {background: url(../images/main/mob/logo-app-kbpay-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(3) {background: url(../images/main/mob/logo-app-livvmate-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(4) {background: url(../images/main/mob/logo-app-kbmall-48.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(5) {background: url(../images/main/mob/logo-app-kbbank.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(6) {background: url(../images/main/mob/app_liivnext_32.png)no-repeat top center /48px ;}
+    #notice .app ul li:nth-child(7) {background: url(../images/main/mob/logo-app-kbdirect-48.png)no-repeat top center /48px ;}
+
+    #notice .app > p { margin-top: 44px; background: #fff;  border: 1px solid #eee; box-shadow: 1px 2px 5px #e2e5e8; border-radius: 10px; height: 136px; display:flex; align-items: flex-end; justify-content: space-around; padding: 24px; position: relative;}
+    #notice .app > p:after { content: ''; height: 60%; width: 1px; background: #eee; position: absolute; top: 20%; left: 50%;}
+
+    #notice .app > p span{ display: block; height: 100%; }
+    #notice .app > p span:nth-child(1) { background: url(../images/main/mob/ico-visual-starshop.svg)no-repeat center/48px;}
+    #notice .app > p span:nth-child(2) { background: url(../images/main/mob/ico-visual-ttbb_2.svg)no-repeat center/48px;}
+    #notice .app > p span a { display: block; height: 100%; display: flex; align-items: flex-end;}
+
+    #notice .m_sns { margin-top: 52px; }
+    #notice .m_sns ul { margin-top: 20px; }
+    #notice .m_sns ul li { float: left; height: 80px; background: #eff; width: 25%; padding-bottom: 10px; background-size: 48px;}
+    #notice .m_sns ul li:nth-child(1) {background: url(../images/main/mob/logo-yt.png)no-repeat center top/48px; }
+    #notice .m_sns ul li:nth-child(2) {background: url(../images/main/mob/logo-blog.png)no-repeat center top/48px;}
+    #notice .m_sns ul li:nth-child(3) {background: url(../images/main/mob/logo-insta.png)no-repeat center top/48px;}
+    #notice .m_sns ul li:nth-child(4) {background: url(../images/main/mob/logo-fb.png)no-repeat center top/48px;}
+    #notice .m_sns ul li a { display: block; height: 100%; display: flex; justify-content: center; align-items: flex-end; }
+
+
 }
+
+
 @media (min-width:801px) { /* PC용 */
     .mob{ display:none;}
 

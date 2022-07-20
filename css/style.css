@@ -98,6 +98,29 @@ header #stiker .dnb .dnb_link ul:first-child { border-left:none;}
 header #stiker .dnb .dnb_link ul li { margin-left: 10px; line-height: 40px;}
 header #stiker .dnb .dnb_link ul li:hover { color: #000; text-decoration: underline; }
 header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;}
+/* footer */
+footer  { border-top: 1px solid #ddd;  margin-top: 130px; }
+footer .wrap.pc { border-top: 1px solid #ddd; padding: 20px 0 60px ;height: 230px;}
+footer .lnb { color: #444; font-weight: 300; font-size: 13px; }
+footer .lnb li { float: left;}
+footer .lnb li:after { content: '|'; padding: 0 20px; color: #c2c2c2;}
+footer .lnb li:last-child:after { display: none;}
+
+footer .pc address { margin-top: 30px; color: #7a7a7a; font-weight: 300;}
+footer .pc address > p { margin-bottom: 16px;  font-size: 13px;}
+footer .pc address > span { font-size: 9px; color: #666;}
+
+footer .award { position: absolute; bottom:60px; left:0;}
+footer .award img {padding-right: 20px;}
+footer .f_sns { position: absolute; bottom:60px; right:220px;}
+footer .f_sns img { width: 24px; margin-right: 14px;}
+
+footer .f_site {position: absolute; bottom:60px; right:0; width: 200px; }
+footer .f_site ul { position: absolute; top: 0; left: 0; transform: translateY(-100%); background: #fff; border:1px solid #ddd; line-height: 28px; width: 196px; padding: 10px 8px 10px; font-weight: 300; display: none;}
+footer .f_site ul li {}
+footer .f_site p { width: 196px; line-height: 34px; border:1px solid #eee; padding:0 24px 0 16px; color: #666; font-size: 14px;}
+footer .f_site p i { position: absolute; line-height: 34px; top: 0; right: 0; font-size: 16px; width: 40px; text-align: center; }
+
 
 /* modal window */
 .modal {position: absolute; bottom: 0;left: 0; background: rgba(0,0,0,0.5); height: 100%; width: 100%; z-index: 100; transition:1s;}
@@ -271,4 +294,4 @@ header #stiker .dnb .dnb_link ul li:first-child { font-weight: 600; color: #333;
 #notice .call td:nth-child(2n-1):before { content: "- "}
 #notice .call span { padding-left: 40px;}
 
-.scroll { background: #faa; height: 4040px; width: 100%;}
+
