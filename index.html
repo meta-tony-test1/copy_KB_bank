@@ -267,14 +267,140 @@
     </header>
     <div class="blank"></div>
     <div class="curtain"></div>
+    <!-- 모바일 메뉴 페이지-->
+    <section id="m_menu" class="mob">
 
-    <section id="m_menu">
         <div class="top">
+            <div class="wrap">
+               <div class="m_head">
+                <a href="#" class="mob m_back"><img src="images/main/mob/arr-2-left.svg" alt="뒤로가기"></a>
+                <h2>
+                    전체메뉴
+                </h2>
+                <a href="#" class="mob m_home"><img src="images/main/mob/ico-2-home.svg" alt="메뉴"></a>
+            </div>
+
+            <div class="blank"></div>
+            <!-- stactic -->
+            <div class="m_gnb">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+
+                <span>
+                    <input type="text" class="search" placeholder="카드, 메뉴, 혜택명 검색">
+                    <button class="btn_clean"></button>
+                    <button class="btn_search"></button>
+                </span>
+
+            </div>
+            </div>
+            <!-- fix 스크롤 -->
+            <div class="nav_loc">
+                <ul>
+                    <li class="under">카드</li>
+                    <li>카드발급관리</li>
+                    <li>금융</li>
+                    <li>생활서비스</li>
+                    <li>편의서비스</li>
+                    <li>해외이용</li>
+                    <li>혜택</li>
+                    <li>혜택가맹점</li>
+                    <li>고객센터</li>
+                </ul>
+            </div>
 
         </div>
+
         <div class="mid">
+            <div class="wrap">
+              <div class="menu_card">
+                   <h3>카드</h3>
+                   <ul>
+                   <li><a href="#">카드한눈에보기 </a></li>
+                   <li><a href="#">전화신청예약 </a></li>
+                   <li><a href="#">신속발급서비스 </a></li>
+                   <li><a href="#">채무조정 성실상환자 신청 </a></li>
+                   <li><a href="#">장기거래고객 레터링카드 </a></li>
+                   </ul>
+               </div>
+                <div class="menu_set">
+                   <h3>카드발급관리</h3>
+                   <ul>
+                       <li>발급상황조회</li>
+                       <li>재배송신청</li>
+                   </ul>
+                </div>
+                <div class="menu_fin">
+                   <h3>장기카드대출(카드론)</h3>
+                   <ul>
+                       <li>단기카드대출(현금서비스)</li>
+                       <li>일부결제금액이월약정(리볼빙)</li>
+                       <li>이지론플러스</li>
+                       <li>비회원 신용대출</li>
+                       <li>개인사업자대출</li>
+                       <li>자동차금융</li>
+                       <li>중고차금융</li>
+                       <li>올리스금융</li>
+                   </ul>
+                </div>
+                <div class="menu_auto">
+                   <h3>생활서비스</h3>
+                   <ul>
+                       <li>생활대금자동납부</li>
+                       <li>자동납부추천</li>
+                   </ul>
+                </div>
+                <div class="menu_con">
+                   <h3>편의서비스</h3>
+                   <ul>
+                       <li>알림&#183;안심서비스</li>
+                       <li>자동납부추천</li>
+                   </ul>
+                </div>
+                <div class="menu_fore">
+                   <h3>해외이용</h3>
+                   <ul>
+                       <li>해외이용서비스</li>
+                       <li>해외이용가이드</li>
+                       <li>해외온라인안전결제(가상카드)</li>
+                       <li>해외혜택센터</li>
+                   </ul>
+                </div>
+                <div class="menu_gift">
+                   <h3>혜택</h3>
+                   <ul>
+                       <li>이벤트</li>
+                       <li>KB스타클럽</li>
+                   </ul>
+                </div>
+                <div class="menu_store">
+                   <h3>혜택가맹점</h3>
+                   <ul>
+                       <li>내주변스타샵</li>
+                       <li>스타샵 혜택</li>
+                       <li>도서할인</li>
+                       <li>펫코노미 서비스</li>
+                       <li>무이자할부</li>
+                   </ul>
+                </div>
+                <div class="menu_help">
+                   <h3>고객센터</h3>
+                   <ul>
+                       <li>ARS이용안내</li>
+                       <li>FAQ</li>
+                       <li>새소식</li>
+                       <li>영업점 찾기</li>
+                       <li>고객상담</li>
+                       <li>장애인 상담안내</li>
+                       <li>온라인 약관&#183;정책</li>
+                       <li>Scene Monitor</li>
+                   </ul>
+                </div>
 
+
+            </div>
         </div>
+        <div class="bgcolor">
         <div class="menu_app">
             <div class="app mob">
                <h3>KB PLUS</h3>
@@ -301,14 +427,16 @@
         <div class="m_sns mob">
             <h3>KB국민카드 소셜 서비스</h3>
             <ul>
-                <li><a href="#">유튜브</a></li>
-                <li><a href="#">블로그</a></li>
-                <li><a href="#">인스타그램</a></li>
-                <li><a href="#">페이스북</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </div>
         </div>
         </div>
+        </div>
+
 
     </section>
 
@@ -1178,16 +1306,21 @@
                 });
             })
 
-            /* 인증 영역*/
+            /* 인증 영역 클릭시 페이지 전환*/
             $(".log ul li").click(function() {
                 var log_no = $(this).index();
                 $(this).addClass("under");
                 $(this).siblings("li").removeClass("under");
-                $(".log > div").eq(log_no).siblings("div").css({
+                $(".log > div").eq(log_no).css({"display": "block"}).siblings("div").css({"display": "none"});
+            })
+
+            /* 질문영역 클릭시 페이지 전환*/
+            $(".info ul li").click(function() {
+                var log_no = $(this).index();
+                $(this).addClass("under");
+                $(this).siblings("li").removeClass("under");
+                $(".info > dl").eq(log_no).css({"display": "block"}).siblings("dl").css({
                     "display": "none"
-                });
-                $(".log > div").eq(log_no).css({
-                    "display": "block"
                 });
             })
 
@@ -1195,15 +1328,44 @@
 
         } else { //모바일 스크립트
 
+
             /* 메뉴페이지 이동 */
+
             $(".m_menu").click(function(){
                 $("#m_menu").css({"display":"block"}).siblings().css({"display":"none"});
-
-                $("#benefit").clone().appendTo($(".slide")).css({"display":"block"}).find(".friends_slide").siblings().css({"display":"none"});
                 $("footer").css({"display":"block"});
+                $("#benefit").appendTo($(".slide")).css({"display":"block"}).find(".friends_slide").siblings().css({"display":"none"});
+                $("footer").css({"background":"#f7f7fa"});
             })
 
+            /* 홈이동 */
+            $(".m_back").click(function(){
+                $("#m_menu").css({"display":"none"}).siblings().css({"display":"block"}).siblings("script").css({"display":"none"});
+                 $("#benefit").insertAfter($("#card")).find(".friends_slide").siblings(".easy, .mob").css({"display":"block"});
+                $("footer").css({"background":"#eff2f7"});
+            })
+            $(".m_home").click(function(){
+                $("#m_menu").css({"display":"none"}).siblings().css({"display":"block"}).siblings("script").css({"display":"none"});
+                $("#benefit").insertAfter("#card").find(".friends_slide").siblings(".easy, .mob").css({"display":"block"});
+                $("footer").css({"background":"#eff2f7"});
+            })
+            /* 헤드 스크롤 */
+            $(window).scroll(function(){
+            var sc = $(window).scrollTop();
+            console.log(sc);
+            if(sc >= 148){  /* 경우의 수 적은 것 부터 시작해야함.*/
+                $(".nav_loc").css({"position":"fixed","background":"#fff"});
+                $(".top .blank").css({"height":116});
+                $(".nav_loc li").eq(0).addClass("under")
+            }else if(sc >= 440){
+                $(".nav_loc li").removeClass("under").eq(1).addClass("under")
+            }else{
+                $(".nav_loc").css({"position":"static","background":"none"});
+                $(".top .blank").css({"height":60});
+                $(".nav_loc li").removeClass("under")
+            }
 
+            })
 
             $(".vi_cont").append($(".vi_cont .baskin").clone());
 
