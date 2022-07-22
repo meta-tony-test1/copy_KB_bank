@@ -43,8 +43,8 @@
     #m_menu .top .m_gnb button {position: absolute; width: 24px; height: 24px; top:calc(50% - 12px); border:none; }
     #m_menu .top .m_gnb .btn_clean { right: 40px; background: url(../images/main/mob/ico-close-g.svg)no-repeat center; display: none; }
     #m_menu .top .m_gnb .btn_search { right: 10px; background: url(../images/main/mob/ico-2-search.svg)no-repeat center; }
-    #m_menu .top .nav_loc {top:56px; z-index: 10}
-    #m_menu .top .nav_loc ul { white-space: nowrap; overflow: auto; padding: 20px 0; font-size: 16px;}
+    #m_menu .top .nav_loc {top:56px; z-index: 10; overflow: auto; width: 100%;}
+    #m_menu .top .nav_loc ul { white-space: nowrap;  padding: 20px 0; font-size: 16px;}
     #m_menu .top .nav_loc ul li { line-height: 40px; padding:0 14px; background: #e5e9eb; border-radius: 100px; display: inline-block; margin-right: 8px; }
     #m_menu .top .nav_loc ul li.under { background: #222; color: #cfcfd2; }
     #m_menu .mid { font-size: 16px; color: #000;  background: #f7f7fa; }
