@@ -1349,21 +1349,6 @@
                 $("#benefit").insertAfter("#card").find(".friends_slide").siblings(".easy, .mob").css({"display":"block"});
                 $("footer").css({"background":"#eff2f7"});
             })
-//            /* 기존: if문 경우의 수 순서 고려안하여 수정 */
-//            $(window).scroll(function(){
-//            var sc = $(window).scrollTop();
-//            console.log(sc);/*2350 static*/
-//            if(sc >= 148){  /* 경우의 수 적은 것 부터 시작해야함.*/
-//                $(".nav_loc").css({"position":"fixed","background":"#fff"});
-//                $(".top .blank").css({"height":116});
-//                $(".nav_loc li").eq(0).addClass("under")
-//            }else if(sc >= 440){
-//                $(".nav_loc li").removeClass("under").eq(1).addClass("under")
-//            }else{
-//                $(".nav_loc").css({"position":"static","background":"none"});
-//                $(".top .blank").css({"height":60});
-//                $(".nav_loc li").removeClass("under")
-//            }})
             /* 헤드 스크롤 */
             $(window).scroll(function(){
             var sc = $(window).scrollTop();
@@ -1389,11 +1374,11 @@
                 l_no = 4;
             }else if(sc >= 1000){ /* 생활서비스 */
                 l_no = 3;
-            }else if(sc >= 580){ /*  */
+            }else if(sc >= 580){ /* 장기카드대출 */
                 l_no = 2;
-            }else if(sc >= 440){ /*  */
+            }else if(sc >= 440){ /* 카드발급관리 */
                 l_no = 1;
-            }else if(sc >= 148){ /*  */
+            }else if(sc >= 148){ /* 카드 */
                 $(".nav_loc").css({"position":"fixed","background":"#fff"});
                 $(".top .blank").css({"height":116});
                 l_no = 0;
@@ -1404,10 +1389,13 @@
                 $(".top .blank").css({"height":60});
                 $(".nav_loc li").removeClass("under")
             }
-            /* 초기 숫자 값이 없어서 오류뜸*/
-            var l_mo = $(".nav_loc li").eq(l_no).offset().left;
-            console.log(l_mo);
-            $(".nav_loc li").removeClass("under").eq(l_no).addClass("under")
+
+            var l_mo = $(".nav_loc li").eq(l_no).position().left;
+            $(".nav_loc li").removeClass("under").eq(l_no).addClass("under");
+//                $(".nav_loc ul").stop().animate({"left":-l_mo},100);
+                $(".nav_loc").stop().animate({scrollLeft : l_mo},300);
+            console.log(l_mo);/* 초기 숫자 값이 없어서 오류뜸*/
+
             })
 
             $(".vi_cont").append($(".vi_cont .baskin").clone());
