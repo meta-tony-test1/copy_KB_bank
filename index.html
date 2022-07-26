@@ -1991,7 +1991,6 @@
             $(".icon_look").css({"display":"inline"})
             $(".fix_modal").removeClass("modal");
             $("#search").css({"display":"none"});
-            $("#fix_menu").css({"display":"none"})
         })
 
         /* PC메뉴 모달 */
@@ -2006,6 +2005,11 @@
             $(".fix_modal").addClass("modal");
             $("html").css({"overflow-y":"scroll"})
             $("body").css({"overflow":"hidden","height":"98vh"})
+
+            $(".s_exit").css({"display":"none"})
+            $(".icon_look").css({"display":"inline"})
+            $("#search").css({"display":"none"});
+
         })
         /*pc 메뉴 클릭 전환*/
         $(".fix_top li").click(function(){
