@@ -1,14 +1,14 @@
-        // !!! 모바일 스크롤시 새로고침이 계속 진행된다. 1.resize?
+        // !!! 모바일 스크롤시 새로고침이 계속 진행된다. 1.resize? -> 8/25 새로고침 메소드 주석
 
         //resize 종료 후 0.3초마다 새로 고침
-        var delay = 300;
-        var re_timer = null;
-        $(window).on('resize', function(){
-            clearTimeout(re_timer);
-            re_timer = setTimeout(function(){
-            document.location.reload();
-            }, delay);
-        });
+//        var delay = 300;
+//        var re_timer = null;
+//        $(window).on('resize', function(){
+//            clearTimeout(re_timer);
+//            re_timer = setTimeout(function(){
+//            document.location.reload();
+//            }, delay);
+//        });
 
 
         /* 반응형 body width 변수값 bw */
