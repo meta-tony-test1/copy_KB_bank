@@ -1,9 +1,11 @@
+        // !!! 모바일 스크롤시 새로고침이 계속 진행된다. 1.resize?
+
         //resize 종료 후 0.3초마다 새로 고침
         var delay = 300;
-        var timer = null;
+        var re_timer = null;
         $(window).on('resize', function(){
-            clearTimeout(timer);
-            timer = setTimeout(function(){
+            clearTimeout(re_timer);
+            re_timer = setTimeout(function(){
             document.location.reload();
             }, delay);
         });
