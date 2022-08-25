@@ -1,5 +1,4 @@
-        // !!! 모바일 스크롤시 새로고침이 계속 진행된다. 1.resize? -> 8/25 새로고침 메소드 주석
-
+        // !!! 모바일 스크롤시 새로고침이 계속 진행된다. 1.resize? -> 8/25 새로고침 메소드 주석 -> return false로 해결
 var cachedWidth = $(window).width();
     $(window).resize(function(){
         var newWidth = $(window).width();

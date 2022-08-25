@@ -79,7 +79,8 @@ header {
 
 header .top {
     line-height: 60px;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+    background: #fff;
 }
 
 header .top li {
